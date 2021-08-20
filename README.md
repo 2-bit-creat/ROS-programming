@@ -29,7 +29,10 @@ mkdir scripts
 cd scripts
 gedit [file_name]  #file create
 code #visual studio
+
 #! urs/bin/evn python  #neccessary to add before coding python in ros
+import rospy
+
 chmod +x [file_name]  #authorization
 cd ~/catkin_ws
 catkin_make 
