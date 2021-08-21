@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+    <node name="main_node" pkg="rplidar_tut" type="main.py" output="screen"/>
+    <node name="flag_node" pkg="rplidar_tut" type="flag_publisher.py" output="screen"/>
+</launch>
