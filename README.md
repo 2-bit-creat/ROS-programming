@@ -9,12 +9,12 @@ source devel/setup.bash
 sudo chmod 666 /dev/ttyUSB*  #authorization
 roslaunch rplidar_ros rplidar.launch 
 
-check
+-check
 rostopic list
 rostopic echo [/topic_name]
 rqt_graph
 
-rviz
+-rviz
 fixed name → laser
 add→ by topic → laser scan 
 laserscan → size → 0.07
@@ -29,10 +29,10 @@ mkdir scripts
 cd scripts
 gedit [file_name]  #file create
 code #visual studio
-
+'''
 #! urs/bin/evn python  #neccessary to add before coding python in ros
 import rospy
-
+'''
 chmod +x [file_name]  #authorization
 cd ~/catkin_ws
 catkin_make 
@@ -54,3 +54,6 @@ sudo apt install v4l-utils 를 통해 몇가지 카메라 관련 Ubuntu Package�
 v4l2-ctl : v4l-utils의 가장 핵심이며 많이 사용하는 명령어입니다.
 v4l2-ctl –list –device : 현재 연결되어 있는 모든 카메라를 index와 함께 출력해줍니다.
 v4l2-ctl –list-formats : 현재 연결된 카메라의 출력 포맷을 출력해줍니다.
+
+-ROS download using git
+https://github.com/jetsonhacks/installROSXavier
