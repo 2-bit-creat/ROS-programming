@@ -59,20 +59,32 @@ v4l2-ctl –list-formats : 현재 연결된 카메라의 출력 포맷을 출력
 https://github.com/jetsonhacks/installROSXavier
 
 -Linux IP connection
-1.ip check
+1. ip check
 sudo apt get ifconfig
 ifconfig
 
-2.wifi setting
+2. wifi setting
 ‘’’
-address(pc): PC_IP
-netmask: 24
+address(pc_IP): 192.168.0.112 
+netmask: 24 //or 255.255.255.0
 gateway(router IP): 192.168.0.1
 ‘’’
-sudo nano ~/.bashrc
+sudo nano ~/.bashrc //or gedit ~/.bashrc
 ‘’’
+112PC에서:
 export ROS_MASTER_URI=http://192.168.1.112:11311   //마스터 IP
 export ROS_IP=192.168.0.112     //현재pc IP 입력
+111PC에서:
+export ROS_MASTER_URI=http://192.168.1.112:11311   //마스터 IP
+export ROS_IP=192.168.0.111     //현재pc IP 입력
 ‘’’
 source ~/.bashrc     // or terminate terminal and reopen
+
+3. ssh 
+-112에서 111원격 제어
+112: ssh wego@192.168.0.111
+wego 비밀번호 입력 //wego는 111 PC이름
+-111에서 112 원격 제어
+111: ssh nvidia@192.168.0.112
+nvidia 비밀번호 // nvidia는 112 PC이름
 
