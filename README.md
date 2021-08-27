@@ -57,3 +57,22 @@ v4l2-ctl –list-formats : 현재 연결된 카메라의 출력 포맷을 출력
 
 -ROS download using git
 https://github.com/jetsonhacks/installROSXavier
+
+-Linux IP connection
+1.ip check
+sudo apt get ifconfig
+ifconfig
+
+2.wifi setting
+‘’’
+address(pc): PC_IP
+netmask: 24
+gateway(router IP): 192.168.0.1
+‘’’
+sudo nano ~/.bashrc
+‘’’
+export ROS_MASTER_URI=http://192.168.1.112:11311   //마스터 IP
+export ROS_IP=192.168.0.112     //현재pc IP 입력
+‘’’
+source ~/.bashrc     // or terminate terminal and reopen
+
