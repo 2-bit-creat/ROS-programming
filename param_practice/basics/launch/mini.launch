@@ -1,0 +1,5 @@
+<launch>
+    <node name="topic_publisher" pkg="basics" type="pub.py" output="screen"/>
+    <node name="topic_subscriber" pkg="basics" type="sub_and_pub.py" output="screen"/>
+    <node name="turtlesim_node" pkg="turtlesim"  type="turtlesim_node" respawn="true" />
+</launch>

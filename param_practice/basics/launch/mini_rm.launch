@@ -1,0 +1,19 @@
+<launch>
+    <!-- <node name="turtlesim_node" pkg="turtlesim"  type="turtlesim_node" respawn="true" /> -->
+    <group ns="turtle1">
+    <node name="topic_publisher" pkg="basics" type="pub.py" output="screen">
+        <!-- <remap from="cmd_vel" to="turtle1/cmd_vel"/>  -->
+        <param name="turtle_speed_x" value='1.0'/>
+        <param name="turtle_ang_vel" value='1.0'/>
+    </node>
+    <!-- <node name="turtlesim_node" pkg="turtlesim"  type="turtlesim_node" respawn="true" /> -->
+    </group>
+
+    <group ns="turtle3">
+    <node name="topic_publisher" pkg="basics" type="pub.py" output="screen">
+        <!-- <remap from="cmd_vel" to="turtle1/cmd_vel"/>  -->
+        <param name="turtle_speed_x" value='3.0'/>
+        <param name="turtle_ang_vel" value='1.0'/>
+    </node>
+    </group>
+</launch>
