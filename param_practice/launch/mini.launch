@@ -1,0 +1,21 @@
+<launch>
+    <group ns="turtle1">
+    <node name="topic_publisher" pkg="param_practice" type="pub.py" output="screen">
+        <param name="turtle_speed_x" value='1.0'/>
+        <param name="turtle_ang_vel" value='1.0'/>
+    </node>
+    </group>
+
+    <group ns="turtle2">
+    <node name="topic_publisher" pkg="param_practice" type="pub.py" output="screen">
+        <param name="turtle_speed_x" value='3.0'/>
+        <param name="turtle_ang_vel" value='1.0'/>
+    </node>
+    </group>
+
+    <node name="topic_publisher" pkg="param_practice" type="pub.py" output="screen">
+        <remap from="cmd_vel" to="turtle3/cmd_vel"/>
+        <param name="turtle_speed_x" value='2.0'/>
+        <param name="turtle_ang_vel" value='1.0'/>
+    </node>
+</launch>
