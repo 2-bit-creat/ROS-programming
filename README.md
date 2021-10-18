@@ -88,3 +88,6 @@ wego 비밀번호 입력 //wego는 111 PC이름
 111: ssh nvidia@192.168.0.112
 nvidia 비밀번호 // nvidia는 112 PC이름
 
+-Linux velodyne IP connection
+Linux - settings - Network - IPv4 - Manual - wireshark(check destination: 192.168.1.100 source: 192.168.1.201) - (IP: 192.168.1.100 subnet mask: 255.255.255.0) - 192.168.1.201 웹 접속 (host:  192.168.1.100 sensor: 192.168.1.201)
+
